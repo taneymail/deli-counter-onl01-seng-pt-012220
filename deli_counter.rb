@@ -5,12 +5,13 @@ def line(katz_deli)
 
   else
     current_sentence = "The line is currently:"
-    counter = 1
-    katz_deli.each do |p|
-      current_sentence += " #{counter}. #{p}"
-      counter += 1
+     if katz_deli.empty?
+    puts "The line is currently empty."
+  else
+    katz_deli.each.with_index(1) do |name, index|
+      customer.push("#{index}. #{name}")
     end
-     puts current_sentence
+      puts current_line + customer.join(" ")
   end
 end
 
