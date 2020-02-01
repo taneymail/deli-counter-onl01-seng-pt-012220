@@ -12,7 +12,7 @@ def line(katz_deli)
     end
       puts current_line + customer.join(" ")
   end
-end
+
 
 def take_a_number(katz_deli,name)
    katz_deli << name
